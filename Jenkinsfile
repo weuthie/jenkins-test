@@ -20,5 +20,12 @@ pipeline {
                 sh "/usr/bin/sbt package"
             }
         }
+        stage('Déplacement du JAR') {
+            steps {
+                echo "Déplacement du JAR..."
+                sh "mkdir -p /home/ousseynou/Bureau/fichier_jar"
+                sh "mv target/*.jar /home/ousseynou/Bureau/fichier_jar"
+            }
+        }
     }
 }
