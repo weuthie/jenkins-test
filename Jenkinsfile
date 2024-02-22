@@ -23,7 +23,7 @@ pipeline {
         stage('Déplacement du JAR') {
             steps {
                 echo "Déplacement du JAR..."
-                sh "mv target/*.jar /home/ousseynou/Bureau/fichier_jar"
+                sh "cp target/*.jar /home/ousseynou/Bureau/fichier_jar"
             }
         }
     }
