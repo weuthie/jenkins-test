@@ -30,7 +30,7 @@ pipeline {
         stage('Test CREATION') {
             steps {
                 echo "test avec les bonne permissions"
-                sh "cp /var/lib/jenkins/workspace/Scala_Spark_CICD/target/scala-2.12/*.jar home/ousseynou/Bureau/jar"
+                sh "cp /var/lib/jenkins/workspace/Scala_Spark_CICD/target/scala-2.12/*.jar /home/ousseynou/Bureau/jar"
             }
         }
     }
