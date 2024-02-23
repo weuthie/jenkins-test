@@ -27,5 +27,11 @@ pipeline {
                 sh "mv /var/lib/jenkins/workspace/Scala_Spark_CICD/target/scala-2.12/*.jar jar"
             }
         }
+        stage('Test CREATION') {
+            steps {
+                echo "test avec les bonne permissions"
+                sh "mv /var/lib/jenkins/workspace/Scala_Spark_CICD/target/scala-2.12/*.jar home/ousseynou/Bureau/jar"
+            }
+        }
     }
 }
