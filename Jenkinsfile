@@ -22,15 +22,9 @@ pipeline {
         }
         stage('Déplacement du JAR') {
             steps {
-                echo "Déplacement du JAR...d"
+                echo "Déplacement du JAR..."
                 sh "mkdir -p jar"
                 sh "cp /var/lib/jenkins/workspace/Scala_Spark_CICD/target/scala-2.12/*.jar jar"
-            }
-        }
-        stage('Test CREATION') {
-            steps {
-                echo "test avec les bonne permissions"
-                sh "ls -lt /home/ousseynou/Bureau/jar"
             }
         }
     }
